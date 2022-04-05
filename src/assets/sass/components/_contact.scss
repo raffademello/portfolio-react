@@ -1,0 +1,28 @@
+.MuiFormControl-root{
+    margin-bottom:10px;
+}
+
+.grid-error{
+    .MuiGrid-item{
+        color:red;
+        font:{
+            size:12px;
+        }
+    }
+}
+
+.contact-info{
+    @include display-flex;
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include media-breakpoint-up(md) {
+        padding-left:80px;
+    }
+
+    p{
+        @include display-flex;
+        svg{
+            margin-right:10px;
+        }
+    }
+}

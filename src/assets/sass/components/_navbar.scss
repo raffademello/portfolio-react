@@ -1,0 +1,7 @@
+header{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @include media-breakpoint-up(md) {
+        padding:10px;
+    }
+}

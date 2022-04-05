@@ -1,0 +1,197 @@
+body,#root{
+    @include display-flex;
+    @include flex-direction(column);
+    height: 100vh;
+	max-height: 100vh;
+	color:#333;
+	padding:0;
+	margin:0;
+	font:{
+		family:'Roboto Mono';
+		weight:400;
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	h2{
+		font-size:40px;
+		margin-bottom:5px;
+	}
+}
+
+.MuiToolbar-root{
+	padding-left:0!important;
+	padding-right:0!important;
+}
+
+.desk-nav{
+	display:none;
+	@include media-breakpoint-up(md) {
+		@include display-flex;
+		margin-right:30px;
+	}
+}
+
+.odd-wrap{
+	padding:15px 0;
+	background-color: #EEE;
+}
+
+.about-resume{
+	text-align:center;
+	>h1{
+		margin:0 0 5px 0;
+		letter-spacing: -1px;
+	}
+
+	>p{
+		margin:0 0 25px 0;
+	}
+}
+
+.MuiTypography-h6{
+	text-transform:uppercase;
+}
+
+.picture{
+    width:150px;
+    height:150px;
+    @include border-radius(50%);
+    overflow: hidden;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-bottom: 15px;;
+}
+
+.social{
+	@include display-flex;
+	@include justify-content(center);
+	a{
+		color: $main-color;
+	}
+}
+
+.home-resume{
+	@include display-flex;
+	@include flex-direction(column);
+	margin-top:30px;
+	p{
+		line-height: 23px;
+	}
+	/*@include media-breakpoint-up(md) {
+		@include flex-direction(row);
+	}*/
+    padding:10px;
+    /*.resume,.skills{
+		@include media-breakpoint-up(md) {
+			width:50%;
+		}
+	}*/
+
+    .skills{
+		/*@include media-breakpoint-up(md) {
+			padding-left:30px;
+		}*/
+        p{
+            @include display-flex;
+            .material-icons{
+                margin-right:15px;
+            }
+		}
+
+		.skills-list{
+			@include display-flex;
+			@include flex-direction(column);
+			@include media-breakpoint-up(md) {
+				@include flex-direction(row);
+				@include flex-wrap(wrap);
+			}
+		}
+    }
+}
+
+footer{
+	margin-top:auto;
+}
+
+/* Skills */
+
+.skillbar {
+	position:relative;
+	display:block;
+	margin-bottom:15px;
+	width:100%;
+	@include media-breakpoint-up(md) {
+		width:46%;
+		margin-right:2%;
+	}
+	background:#eee;
+	height:35px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-webkit-transition:0.4s linear;
+	-moz-transition:0.4s linear;
+	-ms-transition:0.4s linear;
+	-o-transition:0.4s linear;
+	transition:0.4s linear;
+	-webkit-transition-property:width, background-color;
+	-moz-transition-property:width, background-color;
+	-ms-transition-property:width, background-color;
+	-o-transition-property:width, background-color;
+	transition-property:width, background-color;
+}
+
+.skillbar-title {
+	position:absolute;
+	top:0;
+	left:0;
+	width:110px;
+	font-weight:bold;
+	font-size:13px;
+	color:#ffffff;
+	//background:$secondary-color;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+	display:block;
+	background:rgba(0, 0, 0, 0.1);
+	padding:0 20px;
+	height:35px;
+	line-height:35px;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+	height:35px;
+	width:0px;
+	background:$main-color;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+	position:absolute;
+	right:10px;
+	top:0;
+	font-size:11px;
+	height:35px;
+	line-height:35px;
+	color:#ffffff;
+	color:rgba(0, 0, 0, 0.4);
+}
+
+/**/

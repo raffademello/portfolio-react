@@ -1,0 +1,80 @@
+.MuiPaper-root .MuiTypography-subtitle1{
+    font-size:36px;
+    font-family:"Quattrocento Sans"
+}
+
+.display-projects{
+    @include display-flex;
+    @include flex-direction(column);
+    align-items:center;
+    @include media-breakpoint-up(md) {
+        display: grid;
+        margin-top:40px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 2rem 1rem;
+    }
+
+    .MuiCardMedia-root{
+        background-size: 70%;
+    }
+
+    .MuiTypography-subtitle1{
+        font-size:20px;
+    }
+}
+
+.modal-projects .MuiTypography-h6{
+    font-size:30px;
+    color:var(--main-color);
+    font-weight:700;
+    font-family:"Quattrocento Sans"
+}
+
+.modal-projects .description-info-modal h2{
+    text-align: left;
+    font-size:25px;
+}
+
+.modal-projects .MuiButton-label{
+    background:var(--main-color);
+    color:#FFF;
+    padding:15px 20px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.modal-projects .MuiCardMedia-root{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    width:100%;
+    height:155px;
+    background-position:center;
+    background-size:94%;
+}
+
+@media (min-width: 990px){
+  .MuiCardMedia-root{
+    height:600px;
+   }
+}
+
+.modal-projects .MuiDialogTitle-root{
+ padding-left:0;
+ padding-right: 0;
+}
+
+.modal-projects .makeStyles-descriptionModal-6{
+    text-align:left;
+}
+
+.modal-projects .MuiDialogContent-root{
+    overflow:unset;
+}
+
+.MuiDialogContent-root{
+    overflow-y: unset;
+}
+
+.MuiDialogTitle-root{
+    text-align:center;
+}
+
