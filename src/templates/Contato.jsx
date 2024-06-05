@@ -12,6 +12,7 @@ import {
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import EmailIcon from '@material-ui/icons/Email';
 import PhoneIcon from '@material-ui/icons/Phone';
+import Typography from "@material-ui/core/Typography";
 import formValidation from "../services/formValidation";
 
 const inicialState = {
@@ -63,8 +64,9 @@ export default class Contato extends Component {
   render() {
     return (
       <>
-        <h2 className="mb-2">Entre em contato</h2>
-        <small>Dúvidas, orçamentos e parcerias, estou a disposição</small>
+      <Typography variant="h5" gutterBottom>
+        Envie uma mensagem
+      </Typography>
         {this.state.errors && this.state.errors.length > 0 && (
           <Grid container spacing={1} className="mt-4 grid-error">
             {this.state.errors.map(msg => {
@@ -118,6 +120,7 @@ export default class Contato extends Component {
                   multiline
                   margin="normal"
                   size="larger"
+                  className="input-msg"
                   value={this.state.mensagem}
                   name="mensagem"
                   onChange={this.handleOnChange}
@@ -141,15 +144,13 @@ export default class Contato extends Component {
             <Grid item xs={12} md={6}>
               <div className="contact-info d-flex flex-column">
                 <h3>Contato</h3>
-                <p><AccountCircleIcon/> Rafael de Melo
-                </p>
-                <p>
-                  <EmailIcon/>
+                <a className="d-flex align-items-center mb-3" href="mailto:contato@rmsites.com.br">
+                  <EmailIcon className="mr-2"/>
                   contato@rmsites.com.br
-                </p>
-                <p>
-                  <PhoneIcon/> (13) 99185-1159
-                </p>
+                </a>
+                <a className="d-flex align-items-center" href="tel:+5513991851159">
+                  <PhoneIcon className="mr-2"/> {"(13)"} 99185-1159
+                </a>
 
               </div>
             </Grid>

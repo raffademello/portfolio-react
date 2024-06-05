@@ -5,15 +5,14 @@ import Navbar from "./components/Navbar";
 import Container from "@material-ui/core/Container";
 import Footer from "./components/Footer";
 import SideMenu from "./components/SideMenu";
-import ReactGa from 'react-ga'
+import ReactGA from "react-ga4";
 
 
 export default class App extends Component {
   componentDidMount(){
     document.title = "Rafael de Melo - Desenvolvedor Web"
-    ReactGa.initialize('G-4SDJPG6MVE')
-    // to report page view
-    ReactGa.pageview(window.location.pathname + window.location.search);
+    ReactGA.initialize("G-4SDJPG6MVE");
+    ReactGA.send(document.location.pathname);
   }
   render() {
     return (

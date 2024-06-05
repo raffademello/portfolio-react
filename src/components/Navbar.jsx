@@ -16,7 +16,6 @@ const useStyles = (theme => ({
     flexGrow: 1,
     fontFamily:['Roboto Mono'],
     fontWeight:'700',
-    fontSize:'30px'
   },
   titleLink:{
       color:'#FFF',
@@ -25,7 +24,12 @@ const useStyles = (theme => ({
   AppBar:{
     backgroundColor:'#26a69a',
     marginBottom:'20px'
-  }
+  },
+  "@media (max-width: 600px)": {
+    title: {
+      fontSize:'16px'
+    }
+}
 }));
 
 export default function Navbar() {

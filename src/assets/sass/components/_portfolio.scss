@@ -9,9 +9,10 @@
     align-items:center;
     @include media-breakpoint-up(md) {
         display: grid;
-        margin-top:40px;
+        margin:20px 0;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         grid-gap: 2rem 1rem;
+        padding: 0 10px;
     }
 
     .MuiCardMedia-root{
@@ -20,6 +21,12 @@
 
     .MuiTypography-subtitle1{
         font-size:20px;
+    }
+
+    &.odd{
+        background:#EEE;
+        padding-top:20px;
+        padding-bottom:20px;
     }
 }
 
@@ -46,7 +53,7 @@
 .modal-projects .MuiCardMedia-root{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     width:100%;
-    height:155px;
+    height:210px;
     background-position:center;
     background-size:94%;
 }
